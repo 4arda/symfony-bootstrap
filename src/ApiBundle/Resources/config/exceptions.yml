@@ -1,0 +1,6 @@
+parameters:
+    exceptions:
+        no_access:
+            http_code: 401
+            error_code: 401
+            message: "You don't have access to this resource"

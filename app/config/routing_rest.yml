@@ -1,0 +1,4 @@
+default:
+    resource: "ApiBundle:Default"
+    type:     rest
+    name_prefix:  api_v1_

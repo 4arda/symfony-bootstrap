@@ -1,0 +1,10 @@
+assetic:
+    debug:          '%kernel.debug%'
+    use_controller: '%kernel.debug%'
+    filters:
+        cssrewrite: ~
+        scssphp: ~
+    assets:
+        error_style:
+            input:
+                - '../app/Resources/public/css/error.css'

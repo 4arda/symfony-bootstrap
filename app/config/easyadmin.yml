@@ -1,0 +1,28 @@
+easy_admin:
+    site_name: "Admin"
+    formats:
+        date: "d/m/Y"
+        time: "h:i A e"
+    entities:
+        User:
+            label: "User"
+            class: AppBundle\Entity\User
+            list:
+                actions: ['show', 'delete', '-new', 'edit']
+            show:
+                actions: ['delete', 'edit']
+                fields: ['id', 'username', 'email', 'enabled', 'locked', { property: 'last_login', type: 'datetime' }, { property: 'roles', type: 'simple_array' }]
+            edit:
+                fields: ['enabled', 'locked', 'roles']
+        Client:
+            label: "OAuth Clients"
+            class: ApiBundle\Entity\Client
+            list:
+                fields: ['id', 'name']
+                actions: ['show', 'delete', 'new', '-edit']
+            show:
+                fields: ['id', 'name', 'clientId', 'secret', { property: 'allowed_grant_types', type: 'simple_array' }]
+            new:
+                fields: ['name', { property: 'allowed_grant_types', type: 'collection' }]
+            edit:
+                fields: ['name', { property: 'allowed_grant_types', type: 'collection' }]
