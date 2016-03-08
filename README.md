@@ -18,6 +18,7 @@ symfony-bootstrap
 - composer install (give your database information in the wizzard)
 - create an user with 'fos:user:create' commande
 - promote your user with 'fos:user:promote' commande to the role ROLE_ADMIN to have admin access
+- run assets:install and assetic:dump commands
 - use server:start commande to run symfony build-in server
 - browse the application en http://localhost:8000
 
