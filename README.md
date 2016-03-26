@@ -1,6 +1,10 @@
 symfony-bootstrap
 ====
 
+
+
+
+
 # Dependencies
 
  - StofDoctrineExtensionsBundle
